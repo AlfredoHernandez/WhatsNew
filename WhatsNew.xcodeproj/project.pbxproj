@@ -21,6 +21,8 @@
 		38E986C127ED314300F64D76 /* WhatsNewItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986C027ED314300F64D76 /* WhatsNewItemViewModel.swift */; };
 		38E986C327ED315600F64D76 /* WhatsNewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986C227ED315600F64D76 /* WhatsNewHeaderView.swift */; };
 		38E986C527ED319F00F64D76 /* WhatsNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986C427ED319F00F64D76 /* WhatsNewItemView.swift */; };
+		38E986C727ED39DF00F64D76 /* FeaturesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986C627ED39DF00F64D76 /* FeaturesBuilder.swift */; };
+		38E986C927ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986C827ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		38E986C027ED314300F64D76 /* WhatsNewItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewItemViewModel.swift; sourceTree = "<group>"; };
 		38E986C227ED315600F64D76 /* WhatsNewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewHeaderView.swift; sourceTree = "<group>"; };
 		38E986C427ED319F00F64D76 /* WhatsNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewItemView.swift; sourceTree = "<group>"; };
+		38E986C627ED39DF00F64D76 /* FeaturesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesBuilder.swift; sourceTree = "<group>"; };
+		38E986C827ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppFeaturesBuilder.swift; sourceTree = "<group>"; };
+		38E986CA27ED3B1500F64D76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		38E9868227ED25BC00F64D76 = {
 			isa = PBXGroup;
 			children = (
+				38E986CA27ED3B1500F64D76 /* README.md */,
 				38E9868E27ED25BC00F64D76 /* WhatsNew */,
 				38E9869A27ED25BD00F64D76 /* WhatsNewTests */,
 				38E986AB27ED260600F64D76 /* WhatsNewSampleApp */,
@@ -124,6 +130,7 @@
 			children = (
 				38E9869027ED25BC00F64D76 /* WhatsNew.docc */,
 				38E9868F27ED25BC00F64D76 /* WhatsNew.h */,
+				38E986C627ED39DF00F64D76 /* FeaturesBuilder.swift */,
 				38E986B827ED267D00F64D76 /* WhatsNew.swift */,
 				38E986C227ED315600F64D76 /* WhatsNewHeaderView.swift */,
 				38E986C427ED319F00F64D76 /* WhatsNewItemView.swift */,
@@ -143,8 +150,9 @@
 		38E986AB27ED260600F64D76 /* WhatsNewSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				38E986AC27ED260600F64D76 /* WhatsNewApp.swift */,
+				38E986C827ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift */,
 				38E986AE27ED260600F64D76 /* WelcomeView.swift */,
+				38E986AC27ED260600F64D76 /* WhatsNewApp.swift */,
 				38E986B027ED260600F64D76 /* Assets.xcassets */,
 				38E986B227ED260600F64D76 /* Preview Content */,
 			);
@@ -311,6 +319,7 @@
 				38E986B927ED267D00F64D76 /* WhatsNew.swift in Sources */,
 				38E9869127ED25BC00F64D76 /* WhatsNew.docc in Sources */,
 				38E986C127ED314300F64D76 /* WhatsNewItemViewModel.swift in Sources */,
+				38E986C727ED39DF00F64D76 /* FeaturesBuilder.swift in Sources */,
 				38E986C527ED319F00F64D76 /* WhatsNewItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +338,7 @@
 			files = (
 				38E986AF27ED260600F64D76 /* WelcomeView.swift in Sources */,
 				38E986AD27ED260600F64D76 /* WhatsNewApp.swift in Sources */,
+				38E986C927ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

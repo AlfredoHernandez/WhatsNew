@@ -25,23 +25,7 @@ struct WelcomeView: View {
                 }.padding()
             }
         }.sheet(isPresented: $displayWhatsNew, content: {
-            WhatsNew(title: "Maps", features: [
-                .init(
-                    imageName: "bell",
-                    title: "New notifications system",
-                    subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
-                ),
-                .init(
-                    imageName: "clock",
-                    title: "Time to Leave",
-                    subtitle: "Calendar uses Apple Maps to look up, location, traffic conditions, and transit options to tell you when it's time to leave."
-                ),
-                .init(
-                    imageName: "location",
-                    title: "Location Suggestions",
-                    subtitle: "Calendar suggests locations based on your past events and significant locations."
-                ),
-            ], onDismiss: { displayWhatsNew.toggle() })
+            WhatsNew(title: "Maps", featuresBuilder: featuresBuilder, onDismiss: { displayWhatsNew.toggle() })
         })
     }
 }

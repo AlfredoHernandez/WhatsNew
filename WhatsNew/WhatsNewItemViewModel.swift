@@ -10,7 +10,7 @@ public struct WhatsNewItemViewModel: Identifiable {
     let title: String
     let subtitle: String
 
-    public init(imageName: String, title: String, subtitle: String) {
+    internal init(imageName: String, title: String, subtitle: String) {
         self.imageName = imageName
         self.title = title
         self.subtitle = subtitle
