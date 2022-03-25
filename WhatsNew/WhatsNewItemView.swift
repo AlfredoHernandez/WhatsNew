@@ -4,14 +4,14 @@
 
 import SwiftUI
 
-public struct WhatsNewItemView: View {
+struct WhatsNewItemView: View {
     let whatsNewItem: WhatsNewItemViewModel
 
-    public init(_ whatsNewItem: WhatsNewItemViewModel) {
+    init(_ whatsNewItem: WhatsNewItemViewModel) {
         self.whatsNewItem = whatsNewItem
     }
 
-    public var body: some View {
+    var body: some View {
         HStack(alignment: .center) {
             Image(systemName: whatsNewItem.imageName)
                 .resizable()

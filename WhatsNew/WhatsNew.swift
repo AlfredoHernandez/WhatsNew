@@ -9,9 +9,9 @@ public struct WhatsNew: View {
     private let features: [WhatsNewItemViewModel]
     private let onDismiss: () -> Void
 
-    public init(title: String, featuresBuilder: () -> [WhatsNewItemViewModel], onDismiss: @escaping () -> Void) {
+    public init(title: String, featuresBuilder: FeaturesBuilder, onDismiss: @escaping () -> Void) {
         self.title = title
-        features = featuresBuilder()
+        features = featuresBuilder.build()
         self.onDismiss = onDismiss
     }
 

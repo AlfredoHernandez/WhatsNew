@@ -42,4 +42,4 @@ internal let featuresBuilder = FeaturesBuilder(
     imageName: "location",
     title: "Location Suggestions",
     subtitle: "Calendar suggests locations based on your past events and significant locations."
-).build
+)

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		38E9869127ED25BC00F64D76 /* WhatsNew.docc in Sources */ = {isa = PBXBuildFile; fileRef = 38E9869027ED25BC00F64D76 /* WhatsNew.docc */; };
 		38E9869727ED25BD00F64D76 /* WhatsNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9868C27ED25BC00F64D76 /* WhatsNew.framework */; };
-		38E9869C27ED25BD00F64D76 /* WhatsNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9869B27ED25BD00F64D76 /* WhatsNewTests.swift */; };
+		38E9869C27ED25BD00F64D76 /* FeaturesBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E9869B27ED25BD00F64D76 /* FeaturesBuilderTests.swift */; };
 		38E9869D27ED25BD00F64D76 /* WhatsNew.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E9868F27ED25BC00F64D76 /* WhatsNew.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E986AD27ED260600F64D76 /* WhatsNewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986AC27ED260600F64D76 /* WhatsNewApp.swift */; };
 		38E986AF27ED260600F64D76 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E986AE27ED260600F64D76 /* WelcomeView.swift */; };
@@ -61,7 +61,7 @@
 		38E9868F27ED25BC00F64D76 /* WhatsNew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhatsNew.h; sourceTree = "<group>"; };
 		38E9869027ED25BC00F64D76 /* WhatsNew.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WhatsNew.docc; sourceTree = "<group>"; };
 		38E9869627ED25BD00F64D76 /* WhatsNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38E9869B27ED25BD00F64D76 /* WhatsNewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewTests.swift; sourceTree = "<group>"; };
+		38E9869B27ED25BD00F64D76 /* FeaturesBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesBuilderTests.swift; sourceTree = "<group>"; };
 		38E986AA27ED260600F64D76 /* WhatsNewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsNewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E986AC27ED260600F64D76 /* WhatsNewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewApp.swift; sourceTree = "<group>"; };
 		38E986AE27ED260600F64D76 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		38E9869A27ED25BD00F64D76 /* WhatsNewTests */ = {
 			isa = PBXGroup;
 			children = (
-				38E9869B27ED25BD00F64D76 /* WhatsNewTests.swift */,
+				38E9869B27ED25BD00F64D76 /* FeaturesBuilderTests.swift */,
 			);
 			path = WhatsNewTests;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E9869C27ED25BD00F64D76 /* WhatsNewTests.swift in Sources */,
+				38E9869C27ED25BD00F64D76 /* FeaturesBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
