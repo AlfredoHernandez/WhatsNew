@@ -11,11 +11,11 @@ struct WhatsNewHeaderView: View {
         VStack {
             Text(WhatsNewPresenter.title)
                 .bold()
-                .font(.title)
+                .font(.largeTitle)
                 .frame(maxWidth: .infinity)
             Text(WhatsNewPresenter.whatsNew(in: featureName))
                 .bold()
-                .font(.title)
+                .font(.largeTitle)
                 .frame(maxWidth: .infinity)
         }
     }

@@ -19,10 +19,12 @@ public struct WhatsNew: View {
         VStack(alignment: .center, spacing: 16) {
             Spacer()
             WhatsNewHeaderView(featureName: title)
-            ForEach(features) {
-                WhatsNewItemView($0)
-                    .frame(maxWidth: .infinity)
-            }
+            ScrollView([.vertical], showsIndicators: false) {
+                ForEach(features) {
+                    WhatsNewItemView($0)
+                        .frame(maxWidth: .infinity)
+                }
+            }.padding()
             Spacer()
             Button(action: onDismiss) {
                 Text(WhatsNewPresenter.continue)
