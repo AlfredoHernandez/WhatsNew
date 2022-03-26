@@ -9,13 +9,13 @@ struct WhatsNewHeaderView: View {
 
     public var body: some View {
         VStack {
-            Text("What's New")
+            Text(WhatsNewPresenter.title)
                 .bold()
-                .font(.title)
+                .font(.largeTitle)
                 .frame(maxWidth: .infinity)
-            Text("in \(featureName)")
+            Text(WhatsNewPresenter.whatsNew(in: featureName))
                 .bold()
-                .font(.title)
+                .font(.largeTitle)
                 .frame(maxWidth: .infinity)
         }
     }
