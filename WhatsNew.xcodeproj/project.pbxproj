@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3897670B27EFD12E004384FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3897670D27EFD12E004384FB /* Localizable.strings */; };
 		38A1A3FC27ED5BAD005873DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38A1A3FE27ED5BAD005873DC /* Localizable.strings */; };
 		38A1A40127ED5D16005873DC /* WhatsNewPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A40027ED5D16005873DC /* WhatsNewPresentationTests.swift */; };
 		38A1A40327ED5DDC005873DC /* WhatsNewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A40227ED5DDC005873DC /* WhatsNewPresenter.swift */; };
@@ -60,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3831715427EE376F003F3CB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3897670C27EFD12E004384FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3897670E27EFD132004384FB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3897670F27EFD132004384FB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38A1A3FD27ED5BAD005873DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38A1A3FF27ED5BB3005873DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38A1A40027ED5D16005873DC /* WhatsNewPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewPresentationTests.swift; sourceTree = "<group>"; };
@@ -69,7 +74,7 @@
 		38E9869027ED25BC00F64D76 /* WhatsNew.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WhatsNew.docc; sourceTree = "<group>"; };
 		38E9869627ED25BD00F64D76 /* WhatsNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E9869B27ED25BD00F64D76 /* FeaturesBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesBuilderTests.swift; sourceTree = "<group>"; };
-		38E986AA27ED260600F64D76 /* WhatsNewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsNewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E986AA27ED260600F64D76 /* Whats New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E986AC27ED260600F64D76 /* WhatsNewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewApp.swift; sourceTree = "<group>"; };
 		38E986AE27ED260600F64D76 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		38E986B027ED260600F64D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,7 +162,7 @@
 			children = (
 				38E9868C27ED25BC00F64D76 /* WhatsNew.framework */,
 				38E9869627ED25BD00F64D76 /* WhatsNewTests.xctest */,
-				38E986AA27ED260600F64D76 /* WhatsNewSampleApp.app */,
+				38E986AA27ED260600F64D76 /* Whats New.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				38E986AC27ED260600F64D76 /* WhatsNewApp.swift */,
 				38E986B027ED260600F64D76 /* Assets.xcassets */,
 				38E986B227ED260600F64D76 /* Preview Content */,
+				3897670D27EFD12E004384FB /* Localizable.strings */,
 			);
 			path = WhatsNewSampleApp;
 			sourceTree = "<group>";
@@ -274,7 +280,7 @@
 			);
 			name = WhatsNewSampleApp;
 			productName = WhatsNewSampleApp;
-			productReference = 38E986AA27ED260600F64D76 /* WhatsNewSampleApp.app */;
+			productReference = 38E986AA27ED260600F64D76 /* Whats New.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -306,6 +312,7 @@
 				en,
 				Base,
 				es,
+				"es-419",
 			);
 			mainGroup = 38E9868227ED25BC00F64D76;
 			productRefGroup = 38E9868D27ED25BC00F64D76 /* Products */;
@@ -340,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E986B427ED260600F64D76 /* Preview Assets.xcassets in Resources */,
+				3897670B27EFD12E004384FB /* Localizable.strings in Resources */,
 				38E986B127ED260600F64D76 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,11 +404,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3897670D27EFD12E004384FB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3897670C27EFD12E004384FB /* en */,
+				3897670E27EFD132004384FB /* es */,
+				3897670F27EFD132004384FB /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		38A1A3FE27ED5BAD005873DC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				38A1A3FD27ED5BAD005873DC /* es */,
 				38A1A3FF27ED5BB3005873DC /* en */,
+				3831715427EE376F003F3CB3 /* es-419 */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -459,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -516,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -643,7 +662,7 @@
 				);
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.alfredohdz.WhatsNewSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Whats New";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -673,7 +692,7 @@
 				);
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.alfredohdz.WhatsNewSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Whats New";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

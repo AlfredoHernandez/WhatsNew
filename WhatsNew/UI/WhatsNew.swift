@@ -16,27 +16,30 @@ public struct WhatsNew: View {
     }
 
     public var body: some View {
-        VStack(alignment: .center, spacing: 16) {
-            Spacer()
-            WhatsNewHeaderView(featureName: title)
-            ScrollView([.vertical], showsIndicators: false) {
-                ForEach(features) {
-                    WhatsNewItemView($0)
+        NavigationView {
+            VStack(alignment: .center, spacing: 16) {
+                Spacer()
+                WhatsNewHeaderView(featureName: title)
+                ScrollView([.vertical], showsIndicators: false) {
+                    ForEach(features) {
+                        WhatsNewItemView($0)
+                            .frame(maxWidth: .infinity)
+                    }
+                }.padding()
+                Spacer()
+                Button(action: onDismiss) {
+                    Text(WhatsNewPresenter.continue)
+                        .font(.body)
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                }
-            }.padding()
-            Spacer()
-            Button(action: onDismiss) {
-                Text(WhatsNewPresenter.continue)
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.accentColor)
-                    .cornerRadius(8)
-            }.padding()
-        }.padding()
+                        .padding()
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                }.padding()
+            }
+            .padding()
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

@@ -11,12 +11,17 @@ struct WelcomeView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                Text("Welcome to What's New sample app! 😎🤟")
-                    .frame(alignment: .center)
-                    .font(.title)
+                HStack {
+                    Image(systemName: "sparkles")
+                        .resizable()
+                        .frame(width: 64, height: 64, alignment: .center)
+                    Text(NSLocalizedString("welcome", comment: "welcome"))
+                        .frame(alignment: .center)
+                        .font(.title)
+                }
                 Spacer()
                 Button(action: { displayWhatsNew.toggle() }) {
-                    Text("Show Whats New")
+                    Text(NSLocalizedString("show_me_whats_new", comment: "show_me_whats_new"))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -24,6 +29,7 @@ struct WelcomeView: View {
                         .cornerRadius(8)
                 }.padding()
             }
+            .padding()
         }.sheet(isPresented: $displayWhatsNew, content: {
             WhatsNew(title: "Maps", featuresBuilder: featuresBuilder, onDismiss: { displayWhatsNew.toggle() })
         })
