@@ -6,15 +6,15 @@ import Foundation
 import WhatsNew
 
 let featuresBuilder = FeaturesBuilder(
-    imageName: "bell",
-    title: "New notifications system",
-    subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
+    imageName: "sparkles",
+    title: NSLocalizedString("example_whats_new_item_1_title", comment: "example_whats_new_item_1_title"),
+    subtitle: NSLocalizedString("example_whats_new_item_1_brief", comment: "example_whats_new_item_1_brief")
 ).adding(
-    imageName: "clock",
-    title: "Time to Leave",
-    subtitle: "Calendar uses Apple Maps to look up, location, traffic conditions, and transit options to tell you when it's time to leave."
+    imageName: "moon.fill",
+    title: NSLocalizedString("example_whats_new_item_2_title", comment: "example_whats_new_item_2_title"),
+    subtitle: NSLocalizedString("example_whats_new_item_2_brief", comment: "example_whats_new_item_2_brief")
 ).adding(
-    imageName: "location",
-    title: "Location Suggestions",
-    subtitle: "Calendar suggests locations based on your past events and significant locations."
+    imageName: "shippingbox.fill",
+    title: NSLocalizedString("example_whats_new_item_3_title", comment: "example_whats_new_item_3_title"),
+    subtitle: NSLocalizedString("example_whats_new_item_3_brief", comment: "example_whats_new_item_3_brief")
 )

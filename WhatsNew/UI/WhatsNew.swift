@@ -24,6 +24,7 @@ public struct WhatsNew: View {
                     ForEach(features) {
                         WhatsNewItemView($0)
                             .frame(maxWidth: .infinity)
+                            .padding(.bottom)
                     }
                 }.padding()
                 Spacer()

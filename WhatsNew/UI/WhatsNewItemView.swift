@@ -15,7 +15,7 @@ struct WhatsNewItemView: View {
         HStack(alignment: .center, spacing: 16) {
             Image(systemName: whatsNewItem.imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 48, height: 48, alignment: .center)
                 .foregroundColor(.accentColor)
             VStack(alignment: .leading, spacing: 4) {

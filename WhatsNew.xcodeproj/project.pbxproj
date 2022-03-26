@@ -63,9 +63,7 @@
 /* Begin PBXFileReference section */
 		3831715427EE376F003F3CB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3897670C27EFD12E004384FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3897670E27EFD132004384FB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3897670F27EFD132004384FB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		38A1A3FD27ED5BAD005873DC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38A1A3FF27ED5BB3005873DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38A1A40027ED5D16005873DC /* WhatsNewPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewPresentationTests.swift; sourceTree = "<group>"; };
 		38A1A40227ED5DDC005873DC /* WhatsNewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewPresenter.swift; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 				"es-419",
 			);
 			mainGroup = 38E9868227ED25BC00F64D76;
@@ -408,7 +405,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3897670C27EFD12E004384FB /* en */,
-				3897670E27EFD132004384FB /* es */,
 				3897670F27EFD132004384FB /* es-419 */,
 			);
 			name = Localizable.strings;
@@ -417,7 +413,6 @@
 		38A1A3FE27ED5BAD005873DC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				38A1A3FD27ED5BAD005873DC /* es */,
 				38A1A3FF27ED5BB3005873DC /* en */,
 				3831715427EE376F003F3CB3 /* es-419 */,
 			);

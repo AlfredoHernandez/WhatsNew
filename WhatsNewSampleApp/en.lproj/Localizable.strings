@@ -1,2 +1,9 @@
 "welcome" = "Welcome to What's New sample app! 😎🤟";
 "show_me_whats_new" = "Show me, What's new?";
+
+"example_whats_new_item_1_title" = "What's New?";
+"example_whats_new_item_1_brief" = "We design a new What's New section to show you \"What's New?\"✨";
+"example_whats_new_item_2_title" = "Dark mode";
+"example_whats_new_item_2_brief" = "Support to light and dark mode 🌗";
+"example_whats_new_item_3_title" = "Easy to install";
+"example_whats_new_item_3_brief" = "Just use the SPM to add this package to your projects! 📦";

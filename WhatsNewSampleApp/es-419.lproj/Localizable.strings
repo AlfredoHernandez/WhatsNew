@@ -1,2 +1,9 @@
 "welcome" = "Bienvenido a What's New! 😎🤟";
 "show_me_whats_new" = "Muestrame, ¿Qué hay de nuevo?";
+
+"example_whats_new_item_1_title" = "¿Qué hay de nuevo?";
+"example_whats_new_item_1_brief" = "Disñamos una nueva sección para mostrarte, \"¿Qué hay de nuevo?\"✨";
+"example_whats_new_item_2_title" = "Modo Oscuro";
+"example_whats_new_item_2_brief" = "Soporte para temas claros y oscuros 🌗";
+"example_whats_new_item_3_title" = "Facil de Instalar";
+"example_whats_new_item_3_brief" = "Instálalo facilmente usando el SPM! 📦";
