@@ -124,8 +124,8 @@
 		3897671427EFDB46004384FB /* Check Version Feature */ = {
 			isa = PBXGroup;
 			children = (
-				3897671527EFDB5D004384FB /* Bundle+BuildNumber.swift */,
 				3897671A27EFDED6004384FB /* AppVersion.swift */,
+				3897671527EFDB5D004384FB /* Bundle+BuildNumber.swift */,
 				3897671C27EFEC59004384FB /* String+Semver.swift */,
 			);
 			path = "Check Version Feature";
@@ -219,8 +219,8 @@
 				38E986AE27ED260600F64D76 /* WelcomeView.swift */,
 				38E986AC27ED260600F64D76 /* WhatsNewApp.swift */,
 				38E986B027ED260600F64D76 /* Assets.xcassets */,
-				38E986B227ED260600F64D76 /* Preview Content */,
 				3897670D27EFD12E004384FB /* Localizable.strings */,
+				38E986B227ED260600F64D76 /* Preview Content */,
 			);
 			path = WhatsNewSampleApp;
 			sourceTree = "<group>";
