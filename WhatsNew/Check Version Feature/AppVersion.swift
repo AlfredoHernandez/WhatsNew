@@ -4,7 +4,7 @@
 
 import Foundation
 
-public struct AppVersion: Comparable {
+public struct AppVersion: Comparable, CustomStringConvertible {
     public let major: Int
     public let minor: Int
     public let patch: Int
@@ -25,5 +25,9 @@ public struct AppVersion: Comparable {
             return lhs.minor < rhs.minor
         }
         return lhs.major < rhs.major
+    }
+
+    public var description: String {
+        "\(major).\(minor).\(patch)"
     }
 }

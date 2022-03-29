@@ -3,12 +3,20 @@
 //
 
 import SwiftUI
+import WhatsNew
 
 @main
 struct WhatsNewApp: App {
+    let store = SampleAppWhatsNewStore()
+
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            WelcomeView(
+                displayWhatsNew: showWhatsNew(
+                    store: store,
+                    currentAppVersion: Bundle.main.releaseVersionNumber ?? ""
+                )
+            )
         }
     }
 }
