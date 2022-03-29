@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381B667027F3C25400374BD6 /* WhatsNewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B666F27F3C25400374BD6 /* WhatsNewStore.swift */; };
+		381B667227F3C26800374BD6 /* ShowWhatsNewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B667127F3C26800374BD6 /* ShowWhatsNewUseCase.swift */; };
+		381B667427F3C2EF00374BD6 /* ShowWhatsNewUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B667327F3C2EF00374BD6 /* ShowWhatsNewUseCaseTests.swift */; };
+		381B667727F3C7B800374BD6 /* SampleAppWhatsNewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B667527F3C7B100374BD6 /* SampleAppWhatsNewStore.swift */; };
 		3897670B27EFD12E004384FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3897670D27EFD12E004384FB /* Localizable.strings */; };
 		3897671127EFD9EA004384FB /* AppVersionComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897671027EFD9EA004384FB /* AppVersionComparisonTests.swift */; };
 		3897671627EFDB5D004384FB /* Bundle+BuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897671527EFDB5D004384FB /* Bundle+BuildNumber.swift */; };
@@ -65,6 +69,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		381B666F27F3C25400374BD6 /* WhatsNewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewStore.swift; sourceTree = "<group>"; };
+		381B667127F3C26800374BD6 /* ShowWhatsNewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWhatsNewUseCase.swift; sourceTree = "<group>"; };
+		381B667327F3C2EF00374BD6 /* ShowWhatsNewUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWhatsNewUseCaseTests.swift; sourceTree = "<group>"; };
+		381B667527F3C7B100374BD6 /* SampleAppWhatsNewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppWhatsNewStore.swift; sourceTree = "<group>"; };
 		3831715427EE376F003F3CB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3897670C27EFD12E004384FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3897670F27EFD132004384FB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -126,7 +134,9 @@
 			children = (
 				3897671A27EFDED6004384FB /* AppVersion.swift */,
 				3897671527EFDB5D004384FB /* Bundle+BuildNumber.swift */,
+				381B667127F3C26800374BD6 /* ShowWhatsNewUseCase.swift */,
 				3897671C27EFEC59004384FB /* String+Semver.swift */,
+				381B666F27F3C25400374BD6 /* WhatsNewStore.swift */,
 			);
 			path = "Check Version Feature";
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3897671027EFD9EA004384FB /* AppVersionComparisonTests.swift */,
+				381B667327F3C2EF00374BD6 /* ShowWhatsNewUseCaseTests.swift */,
 			);
 			path = "Check Version Feature";
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				38E986C827ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift */,
+				381B667527F3C7B100374BD6 /* SampleAppWhatsNewStore.swift */,
 				38E986AE27ED260600F64D76 /* WelcomeView.swift */,
 				38E986AC27ED260600F64D76 /* WhatsNewApp.swift */,
 				38E986B027ED260600F64D76 /* Assets.xcassets */,
@@ -392,7 +404,9 @@
 				38E9869127ED25BC00F64D76 /* WhatsNew.docc in Sources */,
 				38E986C127ED314300F64D76 /* WhatsNewItemViewModel.swift in Sources */,
 				38E986C727ED39DF00F64D76 /* FeaturesBuilder.swift in Sources */,
+				381B667227F3C26800374BD6 /* ShowWhatsNewUseCase.swift in Sources */,
 				38A1A40327ED5DDC005873DC /* WhatsNewPresenter.swift in Sources */,
+				381B667027F3C25400374BD6 /* WhatsNewStore.swift in Sources */,
 				38E986C527ED319F00F64D76 /* WhatsNewItemView.swift in Sources */,
 				3897671B27EFDED6004384FB /* AppVersion.swift in Sources */,
 			);
@@ -405,6 +419,7 @@
 				3897671127EFD9EA004384FB /* AppVersionComparisonTests.swift in Sources */,
 				38A1A40127ED5D16005873DC /* WhatsNewPresentationTests.swift in Sources */,
 				38E9869C27ED25BD00F64D76 /* FeaturesBuilderTests.swift in Sources */,
+				381B667427F3C2EF00374BD6 /* ShowWhatsNewUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381B667727F3C7B800374BD6 /* SampleAppWhatsNewStore.swift in Sources */,
 				38E986AF27ED260600F64D76 /* WelcomeView.swift in Sources */,
 				38E986AD27ED260600F64D76 /* WhatsNewApp.swift in Sources */,
 				38E986C927ED3A6500F64D76 /* SampleAppFeaturesBuilder.swift in Sources */,
@@ -688,7 +704,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.alfredohdz.WhatsNewSampleApp;
 				PRODUCT_NAME = "Whats New";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -718,7 +734,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.alfredohdz.WhatsNewSampleApp;
 				PRODUCT_NAME = "Whats New";
 				SWIFT_EMIT_LOC_STRINGS = YES;
