@@ -13,8 +13,8 @@
 		381B66C227F3D3CC00374BD6 /* SampleAppFeaturesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B66C127F3D3CC00374BD6 /* SampleAppFeaturesBuilder.swift */; };
 		381B66C427F3D3DC00374BD6 /* SampleAppWhatsNewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B66C327F3D3DC00374BD6 /* SampleAppWhatsNewStore.swift */; };
 		381B66C627F3D3EA00374BD6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B66C527F3D3EA00374BD6 /* WelcomeView.swift */; };
-		381B66CD27F3D4F700374BD6 /* WhatsNew in Frameworks */ = {isa = PBXBuildFile; productRef = 381B66CC27F3D4F700374BD6 /* WhatsNew */; };
 		381B66D027F3D5E300374BD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 381B66D227F3D5E300374BD6 /* Localizable.strings */; };
+		38DA9F6827F3E0CF001A3689 /* WhatsNew in Frameworks */ = {isa = PBXBuildFile; productRef = 38DA9F6727F3E0CF001A3689 /* WhatsNew */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381B66CD27F3D4F700374BD6 /* WhatsNew in Frameworks */,
+				38DA9F6827F3E0CF001A3689 /* WhatsNew in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			);
 			name = WhatsNewSampleApp;
 			packageProductDependencies = (
-				381B66CC27F3D4F700374BD6 /* WhatsNew */,
+				38DA9F6727F3E0CF001A3689 /* WhatsNew */,
 			);
 			productName = WhatsNewSampleApp;
 			productReference = 381B66B027F3D3B200374BD6 /* WhatsNewSampleApp.app */;
@@ -382,7 +382,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		381B66CC27F3D4F700374BD6 /* WhatsNew */ = {
+		38DA9F6727F3E0CF001A3689 /* WhatsNew */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WhatsNew;
 		};
