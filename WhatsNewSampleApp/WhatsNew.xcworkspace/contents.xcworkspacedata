@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WhatsNewSampleApp/WhatsNewSampleApp.xcodeproj">
+      location = "group:WhatsNewSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WhatsNewPackage">
+      location = "group:..">
    </FileRef>
 </Workspace>
