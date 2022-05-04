@@ -5,30 +5,26 @@
 import SwiftUI
 
 public struct WhatsNew: View {
-    private let title: String
-    private let features: [WhatsNewItemViewModel]
-    private let onDismiss: () -> Void
-
-    public init(title: String, featuresBuilder: FeaturesBuilder, onDismiss: @escaping () -> Void) {
-        self.title = title
-        features = featuresBuilder.build()
-        self.onDismiss = onDismiss
+    @ObservedObject public var store: Store<WhatsNewState, WhatsNewAction>
+    
+    init(store: Store<WhatsNewState, WhatsNewAction>) {
+        self.store = store
     }
 
     public var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 16) {
                 Spacer()
-                WhatsNewHeaderView(featureName: title)
+                WhatsNewHeaderView(featureName: store.value.title)
                 ScrollView([.vertical], showsIndicators: false) {
-                    ForEach(features) {
+                    ForEach(store.value.features) {
                         WhatsNewItemView($0)
                             .frame(maxWidth: .infinity)
                             .padding(.bottom)
                     }
                 }.padding()
                 Spacer()
-                Button(action: onDismiss) {
+                Button(action: { store.send(.buttonContinueTapped) }) {
                     Text(WhatsNewPresenter.continue)
                         .font(.body)
                         .foregroundColor(.white)
@@ -52,11 +48,15 @@ struct WhatsNew_Previews: PreviewProvider {
             VStack {
                 Text("Button tapped: \(buttonTappedCount)")
                 WhatsNew(
-                    title: "Maps",
-                    featuresBuilder: featuresBuilder,
-                    onDismiss: {
-                        buttonTappedCount += 1
-                    }
+                    store: Store(
+                        initialValue: WhatsNewState(
+                            title: "Maps",
+                            features: featuresBuilder.build(),
+                            onDismiss: {
+                                buttonTappedCount += 1
+                            }
+                        ),
+                        reducer: whatsNewReducer)
                 )
             }
         }

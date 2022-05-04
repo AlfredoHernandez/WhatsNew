@@ -31,7 +31,7 @@ struct WelcomeView: View {
             }
             .padding()
         }.sheet(isPresented: $displayWhatsNew, content: {
-            WhatsNew(title: "What's New App", featuresBuilder: featuresBuilder, onDismiss: { displayWhatsNew.toggle() })
+            whatsNew(with: "What's New App", features: featuresBuilder, onDismiss: { displayWhatsNew.toggle() })
         })
     }
 }
