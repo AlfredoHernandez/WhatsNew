@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "composable-architecture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AlfredoHernandez/composable-architecture.git",
+      "state" : {
+        "revision" : "2043d0a2828297bd2e272389f0378a3236c62895",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

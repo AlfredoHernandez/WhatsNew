@@ -15,11 +15,14 @@ let package = Package(
             targets: ["WhatsNew"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/AlfredoHernandez/composable-architecture.git", from: "0.1.0"),
     ],
     targets: [
         .target(
             name: "WhatsNew",
-            dependencies: []),
+            dependencies: [
+                .product(name: "ComposableArchitecture", package: "composable-architecture")
+            ]),
         .testTarget(
             name: "WhatsNewTests",
             dependencies: ["WhatsNew"]),

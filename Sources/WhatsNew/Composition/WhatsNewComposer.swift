@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ComposableArchitecture
 
 public struct WhatsNewState {
     var title: String
@@ -23,7 +24,7 @@ public enum WhatsNewAction {
     case buttonContinueTapped
 }
 
-public let whatsNewReducer: Reducer<WhatsNewState, WhatsNewAction> = { state, action in
+let whatsNewReducer: Reducer<WhatsNewState, WhatsNewAction> = { state, action in
     switch action {
     case .buttonContinueTapped:
         return [.fireAndForget(work: state.onDismiss)]

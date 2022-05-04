@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 public struct WhatsNew: View {
     @ObservedObject public var store: Store<WhatsNewState, WhatsNewAction>
