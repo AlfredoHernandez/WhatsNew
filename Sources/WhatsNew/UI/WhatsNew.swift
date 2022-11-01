@@ -6,37 +6,52 @@ import SwiftUI
 import ComposableArchitecture
 
 public struct WhatsNew: View {
-    @ObservedObject public var store: Store<WhatsNewState, WhatsNewAction>
+    let store: Store<WhatsNewState, WhatsNewAction>
     
     init(store: Store<WhatsNewState, WhatsNewAction>) {
         self.store = store
     }
 
     public var body: some View {
-        NavigationView {
-            VStack(alignment: .center, spacing: 16) {
-                Spacer()
-                WhatsNewHeaderView(featureName: store.value.title)
-                ScrollView([.vertical], showsIndicators: false) {
-                    ForEach(store.value.features) {
-                        WhatsNewItemView($0)
+        WithViewStore(store) { viewStore in
+            NavigationView {
+                VStack(alignment: .center, spacing: 16) {
+                    Spacer()
+                    WhatsNewHeaderView(featureName: viewStore.title)
+                    ScrollView([.vertical], showsIndicators: false) {
+                        ForEach(viewStore.features) {
+                            WhatsNewItemView($0)
+                                .frame(maxWidth: .infinity)
+                                .padding(.bottom)
+                        }
+                    }.padding()
+                    Spacer()
+                    Button(action: { viewStore.send(.buttonContinueTapped) }) {
+                        Text(WhatsNewPresenter.continue)
+                            .font(.body)
+                            .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
-                            .padding(.bottom)
-                    }
-                }.padding()
-                Spacer()
-                Button(action: { store.send(.buttonContinueTapped) }) {
-                    Text(WhatsNewPresenter.continue)
-                        .font(.body)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.accentColor)
-                        .cornerRadius(8)
-                }.padding()
+                            .padding()
+                            .background(Color.accentColor)
+                            .cornerRadius(8)
+                    }.padding()
+                }
+                .padding()
+                .modifier(WithNavigationBarTitleDisplayModeIfAvailable(displayMode: .inline))
             }
-            .padding()
-            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
+struct WithNavigationBarTitleDisplayModeIfAvailable: ViewModifier {
+    let displayMode: NavigationBarItem.TitleDisplayMode
+    
+    func body(content: Content) -> some View {
+        if #available(iOS 14.0, *) {
+            content
+                .navigationBarTitleDisplayMode(displayMode)
+        } else {
+            content
         }
     }
 }
@@ -50,14 +65,13 @@ struct WhatsNew_Previews: PreviewProvider {
                 Text("Button tapped: \(buttonTappedCount)")
                 WhatsNew(
                     store: Store(
-                        initialValue: WhatsNewState(
+                        initialState: WhatsNewState(
                             title: "Maps",
-                            features: featuresBuilder.build(),
-                            onDismiss: {
-                                buttonTappedCount += 1
-                            }
+                            features: featuresBuilder.build()
                         ),
-                        reducer: whatsNewReducer)
+                        reducer: whatsNewReducer,
+                        environment: WhatsNewEnvironment(onDismiss: { buttonTappedCount += 1 })
+                    )
                 )
             }
         }

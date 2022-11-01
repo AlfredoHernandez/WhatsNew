@@ -8,38 +8,42 @@
 import Foundation
 import ComposableArchitecture
 
-public struct WhatsNewState {
+public struct WhatsNewState: Equatable {
     var title: String
     var features: [WhatsNewItemViewModel]
-    var onDismiss: () -> Void
 
-    public init(title: String, features: [WhatsNewItemViewModel], onDismiss: @escaping () -> Void) {
+    public init(title: String, features: [WhatsNewItemViewModel]) {
         self.title = title
         self.features = features
-        self.onDismiss = onDismiss
     }
 }
 
-public enum WhatsNewAction {
+public enum WhatsNewAction: Equatable {
     case buttonContinueTapped
 }
 
-let whatsNewReducer: Reducer<WhatsNewState, WhatsNewAction> = { state, action in
+struct WhatsNewEnvironment {
+    let onDismiss: () -> Void
+}
+
+let whatsNewReducer = AnyReducer<WhatsNewState, WhatsNewAction, WhatsNewEnvironment> { state, action, environment in
     switch action {
     case .buttonContinueTapped:
-        return [.fireAndForget(work: state.onDismiss)]
+        return .fireAndForget {
+            environment.onDismiss()
+        }
     }
 }
 
-public func whatsNew(with title: String, features: FeaturesBuilder, onDismiss: @escaping () -> Void) -> WhatsNew {
+public func WhatsNewView(title: String, features: FeaturesBuilder, onDismiss: @escaping () -> Void) -> WhatsNew {
     WhatsNew(
         store: Store(
-            initialValue: WhatsNewState(
+            initialState: WhatsNewState(
                 title: title,
-                features: features.build(),
-                onDismiss: onDismiss
+                features: features.build()
             ),
-            reducer: whatsNewReducer
+            reducer: whatsNewReducer,
+            environment: WhatsNewEnvironment(onDismiss: onDismiss)
         )
     )
 }
