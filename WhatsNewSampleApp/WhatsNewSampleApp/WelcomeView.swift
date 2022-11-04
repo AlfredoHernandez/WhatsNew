@@ -41,7 +41,7 @@ struct WelcomeView: View {
             }
             .padding()
         }.sheet(isPresented: $displayWhatsNew, content: {
-            WhatsNewView(title: "What's New App", features: featuresBuilder, didTapContinueButton: {
+            WhatsNewView(title: "What's New App (Develop)", features: featuresBuilder, didTapContinueButton: {
                 whatsNewContinueButtonTappedCount += 1
             })
         })

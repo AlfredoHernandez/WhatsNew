@@ -11,10 +11,12 @@ struct WhatsNewHeaderView: View {
         VStack {
             Text(WhatsNewPresenter.title)
                 .bold()
+                .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .frame(maxWidth: .infinity)
             Text(WhatsNewPresenter.whatsNew(in: featureName))
                 .bold()
+                .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .frame(maxWidth: .infinity)
         }
