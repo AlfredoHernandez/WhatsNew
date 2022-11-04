@@ -3,42 +3,39 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
 
 public struct WhatsNew: View {
-    let store: Store<WhatsNewState, WhatsNewAction>
+    @ObservedObject var viewModel: WhatsNewViewModel
     
-    init(store: Store<WhatsNewState, WhatsNewAction>) {
-        self.store = store
+    init(viewModel: WhatsNewViewModel) {
+        self.viewModel = viewModel
     }
 
     public var body: some View {
-        WithViewStore(store) { viewStore in
-            NavigationView {
-                VStack(alignment: .center, spacing: 16) {
-                    Spacer()
-                    WhatsNewHeaderView(featureName: viewStore.title)
-                    ScrollView([.vertical], showsIndicators: false) {
-                        ForEach(viewStore.features) {
-                            WhatsNewItemView($0)
-                                .frame(maxWidth: .infinity)
-                                .padding(.bottom)
-                        }
-                    }.padding()
-                    Spacer()
-                    Button(action: { viewStore.send(.buttonContinueTapped) }) {
-                        Text(WhatsNewPresenter.continue)
-                            .font(.body)
-                            .foregroundColor(.white)
+        NavigationView {
+            VStack(alignment: .center, spacing: 16) {
+                Spacer()
+                WhatsNewHeaderView(featureName: viewModel.title)
+                ScrollView([.vertical], showsIndicators: false) {
+                    ForEach(viewModel.features) {
+                        WhatsNewItemView($0)
                             .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.accentColor)
-                            .cornerRadius(8)
-                    }.padding()
-                }
-                .padding()
-                .modifier(WithNavigationBarTitleDisplayModeIfAvailable(displayMode: .inline))
+                            .padding(.bottom)
+                    }
+                }.padding()
+                Spacer()
+                Button(action: viewModel.buttonContinueTapped) {
+                    Text(WhatsNewPresenter.continue)
+                        .font(.body)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                }.padding()
             }
+            .padding()
+            .modifier(WithNavigationBarTitleDisplayModeIfAvailable(displayMode: .inline))
         }
     }
 }
@@ -64,13 +61,11 @@ struct WhatsNew_Previews: PreviewProvider {
             VStack {
                 Text("Button tapped: \(buttonTappedCount)")
                 WhatsNew(
-                    store: Store(
-                        initialState: WhatsNewState(
-                            title: "Maps",
+                    viewModel: WhatsNewViewModel(
+                        state: WhatsNewState(
+                            title:  "Maps",
                             features: featuresBuilder.build()
-                        ),
-                        reducer: whatsNewReducer,
-                        environment: WhatsNewEnvironment(onDismiss: { buttonTappedCount += 1 })
+                        ), didTapContinueButton: { buttonTappedCount += 1 }
                     )
                 )
             }
