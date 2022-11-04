@@ -5,6 +5,7 @@
 import SwiftUI
 
 public struct WhatsNew: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: WhatsNewViewModel
     
     init(viewModel: WhatsNewViewModel) {
@@ -24,7 +25,10 @@ public struct WhatsNew: View {
                     }
                 }.padding()
                 Spacer()
-                Button(action: viewModel.buttonContinueTapped) {
+                Button(action: {
+                    viewModel.buttonContinueTapped()
+                    presentationMode.wrappedValue.dismiss()
+                }) {
                     Text(WhatsNewPresenter.continue)
                         .font(.body)
                         .foregroundColor(.white)

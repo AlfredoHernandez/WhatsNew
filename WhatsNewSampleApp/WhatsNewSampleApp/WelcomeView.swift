@@ -6,6 +6,7 @@ import SwiftUI
 import WhatsNew
 
 struct WelcomeView: View {
+    @State var whatsNewContinueButtonTappedCount = 0
     @State var displayWhatsNew = true
 
     var body: some View {
@@ -15,9 +16,18 @@ struct WelcomeView: View {
                     Image(systemName: "sparkles")
                         .resizable()
                         .frame(width: 64, height: 64, alignment: .center)
+                    
                     Text(NSLocalizedString("welcome", comment: "welcome"))
                         .frame(alignment: .center)
                         .font(.title)
+                }
+                Divider()
+                VStack(alignment: .leading ) {
+                    Text("What's new continue button tapped count: \(whatsNewContinueButtonTappedCount)")
+                        .bold()
+                    
+                    Text("* Use the `didTapContinueButton` completion to handle an event when the What's New view is dissmissed")
+                        .font(.callout)
                 }
                 Spacer()
                 Button(action: { displayWhatsNew.toggle() }) {
@@ -31,7 +41,9 @@ struct WelcomeView: View {
             }
             .padding()
         }.sheet(isPresented: $displayWhatsNew, content: {
-            WhatsNewView(title: "What's New App", features: featuresBuilder, didTapContinueButton: { displayWhatsNew.toggle() })
+            WhatsNewView(title: "What's New App", features: featuresBuilder, didTapContinueButton: {
+                whatsNewContinueButtonTappedCount += 1
+            })
         })
     }
 }
