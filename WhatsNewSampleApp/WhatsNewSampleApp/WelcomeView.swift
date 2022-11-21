@@ -45,6 +45,7 @@ struct WelcomeView: View {
                 whatsNewContinueButtonTappedCount += 1
             })
         })
+        .navigationViewStyle(.stack)
     }
 }
 

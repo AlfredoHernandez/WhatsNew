@@ -41,6 +41,7 @@ public struct WhatsNew: View {
             .padding()
             .modifier(WithNavigationBarTitleDisplayModeIfAvailable(displayMode: .inline))
         }
+        .navigationViewStyle(.stack)
     }
 }
 
