@@ -1,14 +1,10 @@
 //
-//  File.swift
-//  
-//
-//  Created by Jesús Alfredo Hernández Alarcón on 04/05/22.
+//  Copyright © 2022 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import Foundation
-import ComposableArchitecture
 
-public struct WhatsNewState: Equatable {
+struct WhatsNewState: Equatable {
     var title: String
     var features: [WhatsNewItemViewModel]
 
@@ -18,32 +14,13 @@ public struct WhatsNewState: Equatable {
     }
 }
 
-public enum WhatsNewAction: Equatable {
-    case buttonContinueTapped
-}
-
-struct WhatsNewEnvironment {
-    let onDismiss: () -> Void
-}
-
-let whatsNewReducer = AnyReducer<WhatsNewState, WhatsNewAction, WhatsNewEnvironment> { state, action, environment in
-    switch action {
-    case .buttonContinueTapped:
-        return .fireAndForget {
-            environment.onDismiss()
-        }
-    }
-}
-
-public func WhatsNewView(title: String, features: FeaturesBuilder, onDismiss: @escaping () -> Void) -> WhatsNew {
+public func WhatsNewView(title: String, features: FeaturesBuilder, didTapContinueButton: @escaping () -> Void) -> WhatsNew {
     WhatsNew(
-        store: Store(
-            initialState: WhatsNewState(
+        viewModel: WhatsNewViewModel(
+            state: WhatsNewState(
                 title: title,
                 features: features.build()
-            ),
-            reducer: whatsNewReducer,
-            environment: WhatsNewEnvironment(onDismiss: onDismiss)
+            ), didTapContinueButton: didTapContinueButton
         )
     )
 }
