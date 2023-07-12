@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 @testable import WhatsNew
@@ -24,7 +24,7 @@ class WhatsNewPresentationTests: XCTestCase {
         if value == key {
             XCTFail("Missing localized string for key: `\(key)` in table: `\(table)`", file: file, line: line)
         }
-        if let param = param { return String(format: value, param) }
+        if let param { return String(format: value, param) }
         return value
     }
 }

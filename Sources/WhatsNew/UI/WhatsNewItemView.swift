@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -19,15 +19,9 @@ struct WhatsNewItemView: View {
                 .frame(width: 48, height: 48, alignment: .center)
                 .foregroundColor(.accentColor)
             VStack(alignment: .leading, spacing: 4) {
-                if #available(iOS 14.0, *) {
-                    Text(whatsNewItem.title)
-                        .font(.title3)
-                        .bold()
-                } else {
-                    Text(whatsNewItem.title)
-                        .font(.title)
-                        .bold()
-                }
+                Text(whatsNewItem.title)
+                    .font(.title3)
+                    .bold()
                 Text(whatsNewItem.subtitle)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
