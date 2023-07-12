@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -16,16 +16,16 @@ struct WelcomeView: View {
                     Image(systemName: "sparkles")
                         .resizable()
                         .frame(width: 64, height: 64, alignment: .center)
-                    
+
                     Text(NSLocalizedString("welcome", comment: "welcome"))
                         .frame(alignment: .center)
                         .font(.title)
                 }
                 Divider()
-                VStack(alignment: .leading ) {
+                VStack(alignment: .leading) {
                     Text("What's new continue button tapped count: \(whatsNewContinueButtonTappedCount)")
                         .bold()
-                    
+
                     Text("* Use the `didTapContinueButton` completion to handle an event when the What's New view is dissmissed")
                         .font(.callout)
                 }

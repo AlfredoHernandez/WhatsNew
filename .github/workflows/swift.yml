@@ -1,0 +1,27 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-13
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Select Xcode Version
+      run: sudo xcode-select -switch /Applications/Xcode_14.3.1.app
+    
+    - name: Build
+      run: swift build -vv
+    
+    - name: Run tests
+      run: swift test list --parallel -vv

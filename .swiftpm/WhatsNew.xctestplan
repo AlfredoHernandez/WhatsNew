@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "F17011D2-13DA-4700-B107-AD87D2D0EBBC",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "WhatsNew",
+          "name" : "WhatsNew"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "WhatsNewTests",
+        "name" : "WhatsNewTests"
+      }
+    }
+  ],
+  "version" : 1
+}

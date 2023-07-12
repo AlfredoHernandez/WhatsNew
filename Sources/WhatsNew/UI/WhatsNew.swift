@@ -1,5 +1,5 @@
 //
-//  Copyright © 2022 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -7,7 +7,7 @@ import SwiftUI
 public struct WhatsNew: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: WhatsNewViewModel
-    
+
     init(viewModel: WhatsNewViewModel) {
         self.viewModel = viewModel
     }
@@ -39,22 +39,13 @@ public struct WhatsNew: View {
                 }.padding()
             }
             .padding()
-            .modifier(WithNavigationBarTitleDisplayModeIfAvailable(displayMode: .inline))
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
         }
+        #if os(iOS)
         .navigationViewStyle(.stack)
-    }
-}
-
-struct WithNavigationBarTitleDisplayModeIfAvailable: ViewModifier {
-    let displayMode: NavigationBarItem.TitleDisplayMode
-    
-    func body(content: Content) -> some View {
-        if #available(iOS 14.0, *) {
-            content
-                .navigationBarTitleDisplayMode(displayMode)
-        } else {
-            content
-        }
+        #endif
     }
 }
 
@@ -68,7 +59,7 @@ struct WhatsNew_Previews: PreviewProvider {
                 WhatsNew(
                     viewModel: WhatsNewViewModel(
                         state: WhatsNewState(
-                            title:  "Maps",
+                            title: "Maps",
                             features: featuresBuilder.build()
                         ), didTapContinueButton: { buttonTappedCount += 1 }
                     )
