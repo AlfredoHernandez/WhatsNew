@@ -39,9 +39,13 @@ public struct WhatsNew: View {
                 }.padding()
             }
             .padding()
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
         }
+        #if os(iOS)
         .navigationViewStyle(.stack)
+        #endif
     }
 }
 
