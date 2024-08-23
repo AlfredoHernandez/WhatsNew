@@ -1,5 +1,5 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2024 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -27,29 +27,23 @@ struct WhatsNewItemView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.secondary)
             }
-        }
+        }.frame(alignment: .center)
     }
 }
 
-struct WhatsNewItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            let viewModelA = WhatsNewItemViewModel(
-                imageName: "bell",
-                title: "New notifications system",
-                subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
-            )
+#Preview {
+    WhatsNewItemView(WhatsNewItemViewModel(
+        imageName: "bell",
+        title: "New notifications system",
+        subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
+    ))
+}
 
-            let viewModelB = WhatsNewItemViewModel(
-                imageName: "location",
-                title: "Location Suggestions",
-                subtitle: "Calendar suggests locations based on your past events and significant locations."
-            )
-            WhatsNewItemView(viewModelA)
-                .previewLayout(.sizeThatFits)
-            WhatsNewItemView(viewModelB)
-                .preferredColorScheme(.dark)
-                .previewLayout(.sizeThatFits)
-        }
-    }
+#Preview {
+    WhatsNewItemView(WhatsNewItemViewModel(
+        imageName: "location",
+        title: "Location Suggestions",
+        subtitle: "Calendar suggests locations based on your past events and significant locations."
+    ))
+    .preferredColorScheme(.dark)
 }

@@ -1,15 +1,15 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2024 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
 
 class WhatsNewViewModel: ObservableObject {
-    @Published var state: WhatsNewState
+    @Published var state: WhatsNewFeature
     private let didTapContinueButton: (() -> Void)?
 
-    init(state: WhatsNewState, didTapContinueButton: (() -> Void)?) {
-        self.state = state
+    init(feature: WhatsNewFeature, didTapContinueButton: (() -> Void)?) {
+        state = feature
         self.didTapContinueButton = didTapContinueButton
     }
 

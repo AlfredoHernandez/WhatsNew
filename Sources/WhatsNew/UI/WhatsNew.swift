@@ -1,5 +1,5 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2024 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -40,7 +40,7 @@ public struct WhatsNew: View {
             }
             .padding()
             #if os(iOS)
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
             #endif
         }
         #if os(iOS)
@@ -49,37 +49,21 @@ public struct WhatsNew: View {
     }
 }
 
-struct WhatsNew_Previews: PreviewProvider {
-    private struct WhatsNewWrapped: View {
-        @State var buttonTappedCount = 0
-
-        var body: some View {
-            VStack {
-                Text("Button tapped: \(buttonTappedCount)")
-                WhatsNew(
-                    viewModel: WhatsNewViewModel(
-                        state: WhatsNewState(
-                            title: "Maps",
-                            features: featuresBuilder.build()
-                        ), didTapContinueButton: { buttonTappedCount += 1 }
-                    )
-                )
-            }
-        }
-    }
-
-    static var previews: some View {
-        Group {
-            WhatsNewWrapped()
-            WhatsNewWrapped()
-                .preferredColorScheme(.dark)
-        }
-    }
+@available(iOS 17.0, *)
+#Preview {
+    @Previewable @State var buttonTappedCount = 0
+    Text("Button tapped: \(buttonTappedCount)")
+    WhatsNew(viewModel: WhatsNewViewModel(
+        feature: WhatsNewFeature(
+            title: "Maps",
+            features: featuresBuilder.build()
+        ), didTapContinueButton: { buttonTappedCount += 1 }
+    ))
 }
 
 // MARK: - SwiftUI testing builder
 
-internal let featuresBuilder = FeaturesBuilder(
+let featuresBuilder = FeaturesBuilder(
     imageName: "bell",
     title: "New notifications system",
     subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
