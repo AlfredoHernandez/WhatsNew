@@ -1,5 +1,5 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2024 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -49,12 +49,6 @@ struct WelcomeView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            WelcomeView()
-            WelcomeView()
-                .preferredColorScheme(.dark)
-        }
-    }
+#Preview {
+    WelcomeView()
 }

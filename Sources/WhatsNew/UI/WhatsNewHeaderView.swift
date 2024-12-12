@@ -1,5 +1,5 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2024 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -23,9 +23,7 @@ struct WhatsNewHeaderView: View {
     }
 }
 
-struct WhatsNewHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        WhatsNewHeaderView(featureName: "Application Name")
-            .previewLayout(.sizeThatFits)
-    }
+@available(iOS 17.0, *)
+#Preview(traits: .sizeThatFitsLayout) {
+    WhatsNewHeaderView(featureName: "Application Name")
 }
