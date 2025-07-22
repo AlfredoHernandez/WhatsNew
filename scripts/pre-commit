@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+HOOK_PATH=$(git rev-parse --show-toplevel)
+
+format() {
+    # Swiftformat
+    $HOOK_PATH/scripts/format.sh "$1"
+}
+
+run_format() {
+    local filename="${1}"
+    if [[ "${filename##*.}" == "swift" ]]; then
+        format "$filename"
+    fi
+}
+
+pushd $HOOK_PATH
+
+git diff --cached --name-only --diff-filter=ACMRUX | while read filename; do run_format "${filename}" && git add "${filename}" ; done
+
+popd

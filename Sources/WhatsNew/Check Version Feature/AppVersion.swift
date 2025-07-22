@@ -1,10 +1,10 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2025 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import Foundation
 
-public struct AppVersion: Comparable, CustomStringConvertible {
+public struct AppVersion: Sendable, Comparable, CustomStringConvertible {
     public let major: Int
     public let minor: Int
     public let patch: Int

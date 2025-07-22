@@ -1,5 +1,5 @@
 //
-//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2025 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import SwiftUI
@@ -40,7 +40,7 @@ public struct WhatsNew: View {
             }
             .padding()
             #if os(iOS)
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
             #endif
         }
         #if os(iOS)
@@ -79,7 +79,7 @@ struct WhatsNew_Previews: PreviewProvider {
 
 // MARK: - SwiftUI testing builder
 
-internal let featuresBuilder = FeaturesBuilder(
+nonisolated(unsafe) let featuresBuilder = FeaturesBuilder(
     imageName: "bell",
     title: "New notifications system",
     subtitle: "Siri suggests events foud in Mail, Messages, and Safari, so you can add them easily, such as flight reservations and hotel bookings."
