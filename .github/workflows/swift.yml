@@ -12,13 +12,13 @@ on:
 jobs:
   build:
 
-    runs-on: macos-13
+    runs-on: macos-15
 
     steps:
     - uses: actions/checkout@v3
     
     - name: Select Xcode Version
-      run: sudo xcode-select -switch /Applications/Xcode_14.3.1.app
+      run: sudo xcode-select -switch /Applications/Xcode_16.4.appi
     
     - name: Build
       run: swift build -vv
